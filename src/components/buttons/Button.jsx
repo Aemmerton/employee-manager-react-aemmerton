@@ -29,8 +29,9 @@ const ButtonStyles = styled.button`
 
  
 const Button = (props) => {
+ 
   return (
-    <ButtonStyles {...props}>
+    <ButtonStyles {...props} >
       {props.icon}
       {props.label}
       {props.children}
@@ -39,6 +40,8 @@ const Button = (props) => {
 };
 
 export default Button;
+
+ 
 
  
  
