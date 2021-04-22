@@ -1,10 +1,9 @@
 import React, { useState, useContext} from "react";
+
 import styled from "styled-components";
 import { Redirect } from "react-router-dom";
-
 import firebaseApp from "./../firebase/firebaseConfig";
 import AuthContext from 'auth/AuthContext'
-
 import FormInput from "./../components/forms/FormInput";
 import Button from "./../components/buttons/Button";
 
@@ -25,12 +24,15 @@ const LoginPageStyles = styled.div`
   button {
     margin-top: 2rem;
   }
+  button:hover {
+    cursor: pointer;
+  }
 `;
 const LoginPage = (props) => {
  
   const auth = useContext(AuthContext)
-  const [email, setEmail] = useState("james@home.com");
-  const [password, setPassword] = useState("123456");
+  const [email, setEmail] = useState("alex@home.com");
+  const [password, setPassword] = useState("password");
   const [isValid, setIsValid] = useState(false);
 
 
